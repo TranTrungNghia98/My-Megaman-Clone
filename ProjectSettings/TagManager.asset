@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Stair
   - Ground
+  - Radar
+  - Enemy
+  - Player Bullet
   layers:
   - Default
   - TransparentFX

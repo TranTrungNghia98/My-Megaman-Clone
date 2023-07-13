@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D playerRb;
 
-    [SerializeField] private float jumpForce;
+    private float jumpForce = 600.0f;
     private float moveSpeed = 5.0f;
     private float horizontalInput;
     private float verticalInput;
@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isFaceRight = true;
     private bool isColldingAStair = false;
     private bool isClimbingStair = false;
-    [SerializeField] private bool isOnGround = false;
+    private bool isOnGround = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -109,19 +109,20 @@ public class PlayerMovement : MonoBehaviour
         if (!isFaceRight && horizontalInput > 0)
         {
             isFaceRight = true;
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         // Ì player is facing to the right and player move to the left. Turn player face to the left
         else if (isFaceRight && horizontalInput < 0)
         {
             isFaceRight = false;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
 
     // Jump
     void Jump()
     {
+        isOnGround = false;
         playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
