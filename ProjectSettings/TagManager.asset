@@ -9,6 +9,8 @@ TagManager:
   - Radar
   - Enemy
   - Player Bullet
+  - DeadZone
+  - AttackPosition
   layers:
   - Default
   - TransparentFX

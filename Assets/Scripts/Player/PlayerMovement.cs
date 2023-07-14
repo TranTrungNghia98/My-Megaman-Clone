@@ -126,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
         playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
-    // Collide with Stair and Ground
+    // Collide with Stair , Ground
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Stair"))
