@@ -27,8 +27,6 @@ public class Kamadoma : Enemy
 
     private void Update()
     {
-        // Look At Player The Jump Forward
-        LookAtPlayer();
     }
 
     void Jump()
@@ -43,7 +41,7 @@ public class Kamadoma : Enemy
     void MoveForward()
     {
         // Move to Player
-        kamadomaRb.AddForce(transform.right * moveSpeed);
+        kamadomaRb.velocity = transform.right * moveSpeed + new Vector3(0, kamadomaRb.velocity.y);
     }
 
     void LookAtPlayer()
@@ -75,6 +73,8 @@ public class Kamadoma : Enemy
             isOnGround = true;
             // Prevent game object fall down the ground then Jump
             kamadomaRb.constraints = RigidbodyConstraints2D.FreezePositionY;
+            // Look At Player And Jump To Player
+            LookAtPlayer();
             Jump();
         }
 
