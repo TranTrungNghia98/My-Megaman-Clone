@@ -20,13 +20,12 @@ public class MainUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateScore();
         UpdatePlayerHealth();
     }
 
-    void UpdateScore()
+    public void UpdateScore()
     {
-        scoreText.text = gameManagerScript.GetScore().ToString("D8");
+        scoreText.text = gameManagerScript.GetScore().ToString("D9");
     }
 
     void SetPlayerHealth()

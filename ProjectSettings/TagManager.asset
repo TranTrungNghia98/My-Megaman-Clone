@@ -11,6 +11,7 @@ TagManager:
   - Player Bullet
   - DeadZone
   - AttackPosition
+  - BlasterBullet
   layers:
   - Default
   - TransparentFX

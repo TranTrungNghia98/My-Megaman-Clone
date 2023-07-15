@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] MainUI gameUI;
     private int score;
     // Start is called before the first frame update
     void Start()
@@ -25,5 +26,6 @@ public class GameManager : MonoBehaviour
     public void AddScore(int scoreToAdd)
     {
         score += scoreToAdd;
+        gameUI.UpdateScore();
     }
 }

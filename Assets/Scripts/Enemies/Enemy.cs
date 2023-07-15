@@ -4,22 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float health;
-    [SerializeField] private float damage;
+    [SerializeField] protected float health;
+    [SerializeField] protected float damage;
+    [SerializeField] protected int score;
     [SerializeField] GameObject dropItemPrefab;
-    private PlayerStats playerStatsScript;
+    protected PlayerStats playerStatsScript;
+    protected GameManager gameManagerScript;
 
-    private void Start()
-    {
-        playerStatsScript = GameObject.Find("Player").GetComponent<PlayerStats>();
-    }
-
-    private void Update()
-    {
-        CheckHealth();
-    }
-
-    protected void GetDamage()
+    protected virtual void GetDamage()
     {
         float damage = 10;
         health -= damage;
@@ -28,8 +20,8 @@ public class Enemy : MonoBehaviour
     protected void DropItem()
     {
         float randomNumber = Random.Range(0.0f, 1.0f);
-        // 50% drop item
-        if (randomNumber >= 0.5)
+        // 20% drop item
+        if (randomNumber <= 0.2)
         {
             Instantiate(dropItemPrefab, transform.position, dropItemPrefab.transform.rotation);
         }
@@ -38,9 +30,14 @@ public class Enemy : MonoBehaviour
 
     protected void CheckHealth()
     {
+        // Destroy Enemy when health <= 0
         if (health <= 0)
         {
             Destroy(gameObject);
+            // Add Score and 20% to Drop Item
+            DropItem();
+            gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
+            gameManagerScript.AddScore(score);
         }
     }
 
@@ -48,13 +45,16 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player Bullet"))
         {
-            // 50% drop item when be destroy
+            Destroy(collision.gameObject);
+            // Get Damage when has been shoot
             GetDamage();
-            DropItem();
+            // Check if enemy alive
+            CheckHealth();
         }
 
         else if (collision.gameObject.CompareTag("Player"))
         {
+            playerStatsScript = GameObject.Find("Player").GetComponent<PlayerStats>();
             playerStatsScript.GetDamage(damage);
         }
     }

@@ -13,11 +13,11 @@ public class EnemyMovement : MonoBehaviour
 
     // Attack Movement
     private Vector3 attackRotationCenter;
-    private float attackRadius = 4.0f;
-    private float attackAngle = 0.0f;
+    [SerializeField]  private float attackRadius = 4.0f;
+    private float attackRange = 10.0f;
+    private float attackAngle = 0;
     private float attackAngleSpeed = 2.0f;
     private float attackPosX, attackPosY = 0;
-    private float attackRange = 5.0f;
     private bool inAttackMode = false;
     private bool isMoveLeft = true;
 
@@ -67,6 +67,9 @@ public class EnemyMovement : MonoBehaviour
     {
         // Receive move position to move
         Vector3 movePosition = CreateElipsePath();
+
+        // Old Code
+        /*
         // Create prefab position to enemy move to it
         if (!GameObject.FindGameObjectWithTag("AttackPosition"))
         {
@@ -76,6 +79,10 @@ public class EnemyMovement : MonoBehaviour
         // Find AttackPosition Game Object Position and move to it
         Vector3 moveDirection = GameObject.FindGameObjectWithTag("AttackPosition").transform.position - transform.position;
         enemyRb.velocity = moveDirection * speed;
+        */
+
+        transform.position = movePosition;
+        ChangeAngleAttack();
 
     }
 
@@ -84,7 +91,7 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector3 result;
         // Create rotation center above player, so enemy can attack player by elipse
-        attackRotationCenter = player.transform.position + new Vector3(0, 2, 0);
+        attackRotationCenter = player.transform.position + new Vector3(0, attackRadius / 2, 0);
         // Find Attack Position
         attackPosX = attackRotationCenter.x + Mathf.Cos(attackAngle) * attackRadius;
         attackPosY = attackRotationCenter.y + Mathf.Sin(attackAngle) * attackRadius / 2;
@@ -96,6 +103,7 @@ public class EnemyMovement : MonoBehaviour
     // Change attack angle to change attack position. To crease Elipse Path
     private void ChangeAngleAttack()
     {
+        Debug.Log(attackPosX + " , " + attackPosY);
         if (isMoveLeft)
         {
             attackAngle -= Time.deltaTime * attackAngleSpeed;
@@ -106,7 +114,7 @@ public class EnemyMovement : MonoBehaviour
             attackAngle += Time.deltaTime * attackAngleSpeed;
         }
 
-        if (attackAngle < - Mathf.PI)
+        if (attackAngle < -Mathf.PI)
         {
             isMoveLeft = false;
         }
@@ -122,7 +130,7 @@ public class EnemyMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("AttackPosition"))
         {
             Destroy(collision.gameObject);
-            ChangeAngleAttack();
+            
         }
     }
 

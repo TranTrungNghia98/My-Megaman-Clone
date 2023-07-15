@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private Rigidbody2D bulletRb;
     private float speed = 10.0f;
+    private float selfDestructTime = 4;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class Bullet : MonoBehaviour
 
     IEnumerator DestroyBullet()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(selfDestructTime);
         Destroy(gameObject);
     }
 
