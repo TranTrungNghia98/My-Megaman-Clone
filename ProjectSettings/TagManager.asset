@@ -12,11 +12,12 @@ TagManager:
   - DeadZone
   - AttackPosition
   - BlasterBullet
+  - GroundCheck
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 

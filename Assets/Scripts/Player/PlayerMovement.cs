@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRb;
 
     private float jumpForce = 600.0f;
-    private float moveSpeed = 5.0f;
+    private float moveSpeed = 7.0f;
     private float horizontalInput;
     private float verticalInput;
 

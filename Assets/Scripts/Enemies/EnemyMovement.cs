@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     private GameObject player;
-    [SerializeField] private GameObject attackPositionPrefab;
+    //[SerializeField] private GameObject attackPositionPrefab;
 
     // Movement
     private Rigidbody2D enemyRb;
