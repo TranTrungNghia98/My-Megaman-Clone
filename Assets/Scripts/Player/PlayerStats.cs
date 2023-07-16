@@ -35,5 +35,13 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy Bullet"))
+        {
+            // Get Bullet Damage
+            float enemyBulletDamage = 10.0f;
+            GetDamage(enemyBulletDamage);
+        }
+    }
 }

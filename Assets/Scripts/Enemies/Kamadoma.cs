@@ -5,8 +5,8 @@ using UnityEngine;
 public class Kamadoma : Enemy
 {
     // Start is called before the first frame update
-    private float jumpForce = 6.0f;
-    private float moveSpeed = 4.0f;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float moveSpeed;
     private GameObject player;
     private Rigidbody2D kamadomaRb;
     private bool isOnGround = false;
