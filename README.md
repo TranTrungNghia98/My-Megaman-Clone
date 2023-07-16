@@ -5,3 +5,5 @@
 * Use up/down arrow keys to move down/up the stair
 * Use A key to Shoot Bullet
 * Usa S key to Jump
+## Clone Sketch
+![Megaman Clone Sketch](https://img.upanh.tv/2023/07/16/Megaman-Clone-Sketch.jpg)
