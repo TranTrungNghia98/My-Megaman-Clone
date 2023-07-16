@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4892676078785809621}
   - component: {fileID: 4892676078785809608}
   - component: {fileID: 4892676078785809623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bunby Heli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   damage: 5
-  score: 100
+  score: 500
   dropItemPrefab: {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
 --- !u!114 &4892676078785809623
 MonoBehaviour:
@@ -151,5 +151,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6037d06177759514e8f6340ca795a0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPositionPrefab: {fileID: 3113071126658057944, guid: 17f6f620968c52f459431a51432b0a59, type: 3}
   attackRadius: 4

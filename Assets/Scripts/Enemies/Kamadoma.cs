@@ -25,17 +25,11 @@ public class Kamadoma : Enemy
         }
     }
 
-    private void Update()
-    {
-    }
-
     void Jump()
     {
         // Jump
         kamadomaRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         isOnGround = false;
-        // Reset Constraints so game object can Jump
-        ResetConstraints();
     }
 
     void MoveForward()
@@ -60,37 +54,15 @@ public class Kamadoma : Enemy
         }
     }
 
-    void ResetConstraints()
-    {
-        kamadomaRb.constraints = RigidbodyConstraints2D.None;
-        kamadomaRb.constraints = RigidbodyConstraints2D.FreezeRotation;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-            // Prevent game object fall down the ground then Jump
-            kamadomaRb.constraints = RigidbodyConstraints2D.FreezePositionY;
-            // Look At Player And Jump To Player
+            // Look at player then jump to player
             LookAtPlayer();
             Jump();
         }
-
-        if (collision.gameObject.CompareTag("Player Bullet"))
-        {
-            Destroy(collision.gameObject);
-            // Get Damage when has been shoot
-            GetDamage();
-            // Check if enemy alive
-            CheckHealth();
-        }
-
-        else if (collision.gameObject.CompareTag("Player"))
-        {
-            playerStatsScript = GameObject.Find("Player").GetComponent<PlayerStats>();
-            playerStatsScript.GetDamage(damage);
-        }
     }
+
 }

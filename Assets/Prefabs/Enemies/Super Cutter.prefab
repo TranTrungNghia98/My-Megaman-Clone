@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5549291584783720112}
   - component: {fileID: 5549291584783720113}
   - component: {fileID: 5549291584783720116}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Super Cutter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
