@@ -25,6 +25,12 @@ public class Bullet : MonoBehaviour
     {
         yield return new WaitForSeconds(selfDestructTime);
         Destroy(gameObject);
+
+        if (transform.parent)
+        {
+            Destroy(transform.parent.gameObject);
+        }
+        
     }
 
 }
