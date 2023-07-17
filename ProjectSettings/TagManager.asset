@@ -15,6 +15,7 @@ TagManager:
   - GroundCheck
   - Enemy Bullet
   - Top Ladder
+  - Rolling Cutter
   layers:
   - Default
   - TransparentFX

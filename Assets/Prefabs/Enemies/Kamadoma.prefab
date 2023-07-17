@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damage: 40
+  damage: 10
   score: 2000
   dropItemPrefab: {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
   jumpForce: 6
