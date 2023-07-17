@@ -14,6 +14,7 @@ TagManager:
   - BlasterBullet
   - GroundCheck
   - Enemy Bullet
+  - Top Ladder
   layers:
   - Default
   - TransparentFX

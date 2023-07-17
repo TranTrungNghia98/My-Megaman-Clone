@@ -15,10 +15,15 @@ public class PlayerMovement : MonoBehaviour
     private bool isColldingAStair = false;
     private bool isClimbingStair = false;
     private bool isOnGround = false;
+    private float startGravity;
+
+    private BoxCollider2D topLadderCollider;
+
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        startGravity = playerRb.gravityScale;
     }
 
     private void FixedUpdate()
@@ -42,7 +47,13 @@ public class PlayerMovement : MonoBehaviour
             // Make player can Dropdown when player is climbing on the stair
             isClimbingStair = false;
             // Reset Constraint to prevent player keep stading in the stair
-            ResetConstraints();
+            ResetGravity();
+        }
+
+        // Press Arrow Key Down and on top ladder. Set Top Ladder is trigger to player can climb down the ladder
+        else if (Input.GetKey(KeyCode.DownArrow) && topLadderCollider != null)
+        {
+            topLadderCollider.isTrigger = true;
         }
     }
 
@@ -69,12 +80,12 @@ public class PlayerMovement : MonoBehaviour
                 // Prevent player falling down when is climbing but not move
                 if (verticalInput == 0)
                 {
-                    playerRb.constraints = RigidbodyConstraints2D.FreezePositionY;
+                    playerRb.gravityScale = 0;
                 }
 
                 else
                 {
-                    ResetConstraints();
+                    ResetGravity();
                 }
 
                 playerRb.velocity = new Vector2(horizontalInput * moveSpeed, verticalInput * moveSpeed);
@@ -96,10 +107,9 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void ResetConstraints()
+    void ResetGravity()
     {
-        playerRb.constraints = RigidbodyConstraints2D.None;
-        playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        playerRb.gravityScale = startGravity;
     }
 
     // Rotate Face
@@ -140,8 +150,17 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Stair"))
         {
             isColldingAStair = false;
-            ResetConstraints();
+            ResetGravity();
             isClimbingStair = false;
+        }
+
+
+        else if (collision.gameObject.CompareTag("Top Ladder"))
+        {
+            // Turn off trigger in top ladder so player can stand on it
+            topLadderCollider.isTrigger = false;
+            // Turn off collider when player not on top ladder
+            topLadderCollider = null;
         }
     }
 
@@ -151,6 +170,13 @@ public class PlayerMovement : MonoBehaviour
         {
             isOnGround = true;
             isClimbingStair = false;
+            ResetGravity();
+        }
+
+        else if (collision.gameObject.CompareTag("Top Ladder"))
+        {
+            isOnGround = true;
+            topLadderCollider = collision.gameObject.GetComponent<BoxCollider2D>();
         }
     }
 
