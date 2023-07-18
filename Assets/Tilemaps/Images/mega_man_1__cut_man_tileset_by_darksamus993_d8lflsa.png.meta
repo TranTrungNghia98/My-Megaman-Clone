@@ -1,0 +1,985 @@
+fileFormatVersion: 2
+guid: b18eac997e6d8c74daaa57397a5f6630
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8585913604364565673
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_0
+  - first:
+      213: 1910893005569042099
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_1
+  - first:
+      213: 4080986751628592318
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_2
+  - first:
+      213: -8791227494574164712
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_3
+  - first:
+      213: 456746399811891954
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_4
+  - first:
+      213: -4635066474498213909
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_5
+  - first:
+      213: 3633126127194709048
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_6
+  - first:
+      213: 8155153091382447621
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_7
+  - first:
+      213: 524045911020691132
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_8
+  - first:
+      213: -4847600390378575663
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_9
+  - first:
+      213: -3109451336667835585
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_10
+  - first:
+      213: -385209336449064653
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_11
+  - first:
+      213: -3605682852074592445
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_12
+  - first:
+      213: -9154212662771056144
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_13
+  - first:
+      213: 4846394334381281876
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_14
+  - first:
+      213: 6999557100343922173
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_15
+  - first:
+      213: -3416900470282012180
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_16
+  - first:
+      213: 7409023077037384912
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_17
+  - first:
+      213: -2343150261035820777
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_18
+  - first:
+      213: 6909602692211082675
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_19
+  - first:
+      213: -372198245601776112
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_20
+  - first:
+      213: 4847754342473697888
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_21
+  - first:
+      213: 8257214970463337441
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_22
+  - first:
+      213: -2332169972878215718
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_23
+  - first:
+      213: 6258814316944118140
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_24
+  - first:
+      213: 5952616651394069389
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_25
+  - first:
+      213: -6921495760617666081
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_26
+  - first:
+      213: -6712459614630419905
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_27
+  - first:
+      213: 1333492418241287872
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_28
+  - first:
+      213: -4446557456199651360
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_29
+  - first:
+      213: -7790168777755382896
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_30
+  - first:
+      213: -3060845733755773713
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_31
+  - first:
+      213: 2765958393749347177
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_32
+  - first:
+      213: -1520961238377479317
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_33
+  - first:
+      213: 1710569941352262083
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_34
+  - first:
+      213: -3038256151492177952
+    second: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_35
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9acf75cdeea472770800000000000000
+      internalID: 8585913604364565673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6a8b0701bd48a10800000000000000
+      internalID: 1910893005569042099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4c5ef14d392a830800000000000000
+      internalID: 4080986751628592318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_3
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815724eeb294ff580800000000000000
+      internalID: -8791227494574164712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 56
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2f9314e60b65600800000000000000
+      internalID: 456746399811891954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_5
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 56
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7363d599fecafb0800000000000000
+      internalID: -4635066474498213909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_6
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 56
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c91aba6f47b6230800000000000000
+      internalID: 3633126127194709048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_7
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 56
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e87cc578cec2170800000000000000
+      internalID: 8155153091382447621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 56
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe5264caf8c54700800000000000000
+      internalID: 524045911020691132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_9
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 56
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8a07ee02dd9bcb0800000000000000
+      internalID: -4847600390378575663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_10
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 56
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33dc8fdb7209d4d0800000000000000
+      internalID: -3109451336667835585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_11
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 56
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3312ac0462677aaf0800000000000000
+      internalID: -385209336449064653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 39
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347606dbc8a06fdc0800000000000000
+      internalID: -3605682852074592445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_13
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 39
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f106259514b5f080800000000000000
+      internalID: -9154212662771056144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_14
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 39
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452134648f9d14340800000000000000
+      internalID: 4846394334381281876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_15
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 39
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd0017f81c632160800000000000000
+      internalID: 6999557100343922173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_16
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 39
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9b9f3302bb490d0800000000000000
+      internalID: -3416900470282012180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_17
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 39
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d42c7fdb3322d660800000000000000
+      internalID: 7409023077037384912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_18
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 39
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719989b80457b7fd0800000000000000
+      internalID: -2343150261035820777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_19
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 39
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b503583a07d3ef50800000000000000
+      internalID: 6909602692211082675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 22
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ee1e8eaafa5daf0800000000000000
+      internalID: -372198245601776112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 22
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a8085d3eea64340800000000000000
+      internalID: 4847754342473697888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_22
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 22
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb318c5445879270800000000000000
+      internalID: 8257214970463337441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_23
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 22
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5f2ca14c772afd0800000000000000
+      internalID: -2332169972878215718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_24
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 22
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71559ce576cbd650800000000000000
+      internalID: 6258814316944118140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_25
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 22
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d833b6e5e41fb9250800000000000000
+      internalID: 5952616651394069389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_26
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 22
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd903020748e1ff90800000000000000
+      internalID: -6921495760617666081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_27
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 22
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f326ccc6b8d88d2a0800000000000000
+      internalID: -6712459614630419905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_28
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6d2fb0a44818210800000000000000
+      internalID: 1333492418241287872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_29
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 5
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efeadd6d87aa42c0800000000000000
+      internalID: -4446557456199651360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_30
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 5
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b2d8d45c2c3e390800000000000000
+      internalID: -7790168777755382896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_31
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 5
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec973fa501b585d0800000000000000
+      internalID: -3060845733755773713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_32
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 5
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b90f22188a26620800000000000000
+      internalID: 2765958393749347177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_33
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 5
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b634f55efc574eae0800000000000000
+      internalID: -1520961238377479317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_34
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 5
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c923c57c4a2db710800000000000000
+      internalID: 1710569941352262083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mega_man_1__cut_man_tileset_by_darksamus993_d8lflsa_35
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 5
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efc9a9a022f5d5d0800000000000000
+      internalID: -3038256151492177952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
