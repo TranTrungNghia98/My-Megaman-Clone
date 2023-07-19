@@ -16,6 +16,8 @@ TagManager:
   - Enemy Bullet
   - Top Ladder
   - Rolling Cutter
+  - Open Door
+  - Close Door
   layers:
   - Default
   - TransparentFX
