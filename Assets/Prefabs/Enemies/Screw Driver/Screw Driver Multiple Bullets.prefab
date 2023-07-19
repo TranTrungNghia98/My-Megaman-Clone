@@ -46,6 +46,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Screw Driver Bullet (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4752559019119956513, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4752559019119956525, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -107,6 +111,10 @@ PrefabInstance:
     - target: {fileID: 4752559019119956512, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
       propertyPath: m_Name
       value: Screw Driver Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752559019119956513, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4752559019119956525, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
       propertyPath: m_RootOrder
@@ -170,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Screw Driver Bullet (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4752559019119956513, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4752559019119956525, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -232,6 +244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Screw Driver Bullet (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4752559019119956513, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4752559019119956525, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -293,6 +309,10 @@ PrefabInstance:
     - target: {fileID: 4752559019119956512, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
       propertyPath: m_Name
       value: Screw Driver Bullet (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752559019119956513, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4752559019119956525, guid: f53624bb0845f3f41bb53081e08505cf, type: 3}
       propertyPath: m_RootOrder
