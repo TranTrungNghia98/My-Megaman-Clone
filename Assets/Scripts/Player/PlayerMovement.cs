@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isOnGround = false;
     private float startGravity;
 
-    private BoxCollider2D topLadderCollider;
+    private TilemapCollider2D topLadderCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -158,7 +159,10 @@ public class PlayerMovement : MonoBehaviour
         else if (collision.gameObject.CompareTag("Top Ladder"))
         {
             // Turn off trigger in top ladder so player can stand on it
-            topLadderCollider.isTrigger = false;
+            if (topLadderCollider.isTrigger)
+            {
+                topLadderCollider.isTrigger = false;
+            }
             // Turn off collider when player not on top ladder
             topLadderCollider = null;
         }
@@ -176,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
         else if (collision.gameObject.CompareTag("Top Ladder"))
         {
             isOnGround = true;
-            topLadderCollider = collision.gameObject.GetComponent<BoxCollider2D>();
+            topLadderCollider = collision.gameObject.GetComponent<TilemapCollider2D>();
         }
     }
 
