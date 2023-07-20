@@ -7,8 +7,9 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D playerRb;
 
-    private float jumpForce = 600.0f;
+    private float jumpForce = 500.0f;
     private float moveSpeed = 7.0f;
+    private float climbSpeed = 5.0f;
     private float horizontalInput;
     private float verticalInput;
 
@@ -89,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
                     ResetGravity();
                 }
 
-                playerRb.velocity = new Vector2(horizontalInput * moveSpeed, verticalInput * moveSpeed);
+                playerRb.velocity = new Vector2(horizontalInput * climbSpeed, verticalInput * climbSpeed);
             }
 
             // If player only colldie with the stair and don't want to climbing on it. So player can jump and fall when they collide with the stair

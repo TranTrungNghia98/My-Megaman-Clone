@@ -25,6 +25,11 @@ public class Kamadoma : Enemy
         }
     }
 
+    private void Update()
+    {
+        Debug.Log("Is on Ground: " + isOnGround);
+    }
+
     void Jump()
     {
         // Jump

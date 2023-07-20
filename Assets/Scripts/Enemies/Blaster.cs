@@ -83,6 +83,12 @@ public class Blaster : Enemy
             GetDamage();
             CheckHealth();
         }
+
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            playerStatsScript = GameObject.Find("Player").GetComponent<PlayerStats>();
+            playerStatsScript.GetDamage(damage);
+        }
     }
 
 }

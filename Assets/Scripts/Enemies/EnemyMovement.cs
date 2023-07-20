@@ -9,12 +9,12 @@ public class EnemyMovement : MonoBehaviour
 
     // Movement
     private Rigidbody2D enemyRb;
-    private float speed = 10.0f;
+    private float speed = 5.0f;
 
     // Attack Movement
     private Vector3 attackRotationCenter;
     [SerializeField]  private float attackRadius = 4.0f;
-    private float attackRange = 10.0f;
+    private float attackRange = 5.0f;
     private float attackAngle = 0;
     private float attackAngleSpeed = 2.0f;
     private float attackPosX, attackPosY = 0;
@@ -103,7 +103,6 @@ public class EnemyMovement : MonoBehaviour
     // Change attack angle to change attack position. To crease Elipse Path
     private void ChangeAngleAttack()
     {
-        Debug.Log(attackPosX + " , " + attackPosY);
         if (isMoveLeft)
         {
             attackAngle -= Time.deltaTime * attackAngleSpeed;

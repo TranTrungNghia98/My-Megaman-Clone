@@ -24,13 +24,12 @@ public class Bullet : MonoBehaviour
     IEnumerator DestroyBullet()
     {
         yield return new WaitForSeconds(selfDestructTime);
-        Destroy(gameObject);
-
+        
         if (transform.parent)
         {
             Destroy(transform.parent.gameObject);
         }
-        
-    }
 
+        Destroy(gameObject);
+    }
 }

@@ -18,6 +18,7 @@ TagManager:
   - Rolling Cutter
   - Open Door
   - Close Door
+  - Active Enemy Area
   layers:
   - Default
   - TransparentFX

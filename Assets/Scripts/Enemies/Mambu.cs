@@ -5,9 +5,10 @@ using UnityEngine;
 public class Mambu : Enemy
 {
     private Rigidbody2D mambuRb;
-    private float moveSpeed = 10.0f;
+    private float moveSpeed = 7.0f;
     private bool isDefendMode;
     private float switchModeTime = 2.0f;
+    private float selfDestructTime = 4.0f;
     [SerializeField] GameObject multipleBulletPrefab;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,9 @@ public class Mambu : Enemy
         mambuRb = GetComponent<Rigidbody2D>();
         // Choose Random Mode To Create interesting experience
         ChooseRandomMode();
+
+        // Destroy after few seconds
+        StartCoroutine(SelfDestruct());
     }
 
     // Update is called once per frame
@@ -93,6 +97,13 @@ public class Mambu : Enemy
         // Reset contraints so palyer can move
         mambuRb.constraints = RigidbodyConstraints2D.None;
         mambuRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+
+    private IEnumerator SelfDestruct()
+    {
+        yield return new WaitForSeconds(selfDestructTime);
+        Destroy(gameObject);
+
     }
 
     // Change Get Damage Method So game object can't get damage when in defend mode

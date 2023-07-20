@@ -7,6 +7,7 @@ public class AdheringSuzy : Enemy
     private float moveSpeed = 10.0f;
     private Rigidbody2D adheringSuzyRb;
     private float rotateTime = 1.5f;
+    private bool isStopMoving = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,29 +18,24 @@ public class AdheringSuzy : Enemy
     // Update is called once per frame
     void FixedUpdate()
     {
-        MoveForward();
+        if (!isStopMoving)
+        {
+            Move();
+        }
     }
 
-    void MoveForward()
+    void Move()
     {
         adheringSuzyRb.velocity = transform.right * moveSpeed;
     }
 
-    IEnumerator ChangeRotation()
+    IEnumerator ChangeDirection()
     {
+        isStopMoving = true;
+        moveSpeed *= -1;
         yield return new WaitForSeconds(rotateTime);
 
-        float rotationY = transform.rotation.y;
-
-        if (rotationY == 0)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-
-        else
-        {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
+        isStopMoving = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -47,8 +43,7 @@ public class AdheringSuzy : Enemy
         // When Game Object collide Ground. Wait a few second and rotate game object
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("Colide with " + collision.gameObject.name);
-            StartCoroutine(ChangeRotation());
+            StartCoroutine(ChangeDirection());
         }
     }
 }

@@ -7,8 +7,6 @@ public class ScrewDriver : Enemy
     [SerializeField] private GameObject multipleBulletPrefabs;
     private float shootCount = 0;
     private float shootRate = 1.5f;
-    private Vector2 startPosition;
-    private Vector2 attackPosition;
 
     private GameObject player;
     private float attackRange = 10;
@@ -16,8 +14,6 @@ public class ScrewDriver : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        startPosition = transform.position;
-        attackPosition = startPosition + new Vector2(0, 2);
         player = GameObject.Find("Player");
 
         StartCoroutine(StartAttack());
@@ -44,7 +40,8 @@ public class ScrewDriver : Enemy
     // Move To Attack Poistion and Shoot 2 time and stop attack
     private IEnumerator StartAttack()
     {
-        transform.position = attackPosition;
+        Debug.Log("Attack");
+        transform.localPosition = transform.localPosition + transform.up;
         // Shoot 2 time and Stop attack. After shoot, wait a few time then shoot again
         while (shootCount < 2 && isStartingAttack)
         {
@@ -62,10 +59,11 @@ public class ScrewDriver : Enemy
     // Move to stat Position, wait a few second and attack again
     private IEnumerator StopAttack()
     {
+        Debug.Log("Stop Attack");
         // Reset Shoot Count, make game object can shoot again
         shootCount = 0;
 
-        transform.localPosition = startPosition;
+        transform.localPosition = transform.localPosition - transform.up;
 
         yield return new WaitForSeconds(shootRate);
 
