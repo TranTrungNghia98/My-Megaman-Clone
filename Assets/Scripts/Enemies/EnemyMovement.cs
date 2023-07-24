@@ -9,12 +9,12 @@ public class EnemyMovement : MonoBehaviour
 
     // Movement
     private Rigidbody2D enemyRb;
-    private float speed = 5.0f;
+    private float speed = 10.0f;
 
     // Attack Movement
     private Vector3 attackRotationCenter;
-    [SerializeField]  private float attackRadius = 4.0f;
-    private float attackRange = 5.0f;
+    [SerializeField]  private float attackRadius;
+    private float attackRange = 8.0f;
     private float attackAngle = 0;
     private float attackAngleSpeed = 2.0f;
     private float attackPosX, attackPosY = 0;
@@ -81,7 +81,9 @@ public class EnemyMovement : MonoBehaviour
         enemyRb.velocity = moveDirection * speed;
         */
 
-        transform.position = movePosition;
+        Vector3 moveDirection = (movePosition - transform.position).normalized;
+
+        enemyRb.velocity = moveDirection * speed;
         ChangeAngleAttack();
 
     }
