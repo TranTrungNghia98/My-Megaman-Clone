@@ -46,6 +46,20 @@ public class EnemyMovement : MonoBehaviour
     private void Update()
     {
         CheckDistance();
+        LookAtPlayer();
+    }
+
+    void LookAtPlayer()
+    {
+        if (player.transform.position.x < transform.position.x)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     private void CheckDistance()

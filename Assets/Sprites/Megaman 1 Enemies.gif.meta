@@ -4,13 +4,13 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 4343794596125867364
-    second: Megaman 1 Enemies_0
+    second: Adhering Suzy 2
   - first:
       213: -4970396681004785635
-    second: Megaman 1 Enemies_1
+    second: Kamadoma 0
   - first:
       213: 3365642215174817144
-    second: Megaman 1 Enemies_2
+    second: Kamadoma 1
   - first:
       213: 7099382481759834627
     second: Megaman 1 Enemies_3
@@ -635,27 +635,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Adhering Suzy 2
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 253
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eab9f61dc59c6e470800000000000000
-      internalID: 8423641553531018158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Super Cutter 0
       rect:
         serializedVersion: 2
@@ -866,48 +845,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kamadoma 0
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 209
-        width: 14
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08f29d19c99043df0800000000000000
-      internalID: -201525515258351744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kamadoma 1
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 209
-        width: 14
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 879935e6d948e62f0800000000000000
-      internalID: -977698257397114504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Screw Driver 0
       rect:
         serializedVersion: 2
@@ -1013,11 +950,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Megaman 1 Enemies_73
+      name: Adhering Suzy 2
       rect:
         serializedVersion: 2
-        x: 402
-        y: 180
+        x: 52
+        y: 255
         width: 16
         height: 16
       alignment: 0
@@ -1027,8 +964,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64c70863860f34f20800000000000000
-      internalID: 3405830073603882054
+      spriteID: 46df757bb22484c30800000000000000
+      internalID: 4343794596125867364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kamadoma 0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 209
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10edeb8d8a950bb0800000000000000
+      internalID: -4970396681004785635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kamadoma 1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 209
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875cd8443c925be20800000000000000
+      internalID: 3365642215174817144
       vertices: []
       indices: 
       edges: []

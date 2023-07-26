@@ -5,12 +5,16 @@ using UnityEngine;
 public class Blaster : Enemy
 {
     [SerializeField] GameObject[] blasterBulletPrefabs;
+    [SerializeField] GameObject bulletPosition;
     private int bulletNumber = 0;
     private bool isDefendMode = false;
     private float shootRate = 0.5f;
+
+    private Animator blasterAnimator;
     // Start is called before the first frame update
     void Start()
     {
+        blasterAnimator = GetComponent<Animator>();
         // Choose Random Mode from beginning
         ChooseRandomMode();
     }
@@ -31,9 +35,10 @@ public class Blaster : Enemy
 
     IEnumerator ChangeToDefendMode()
     {
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(113, 228, 0, 255);
         // Go to defend mode. Can't get damage from player
         isDefendMode = true;
+        // Play Defend Animation
+        blasterAnimator.Play("Defend");
         // Defend a few second then go to attack mode
         float defendTime = 4.0f;
         yield return new WaitForSeconds(defendTime);
@@ -42,9 +47,15 @@ public class Blaster : Enemy
 
     IEnumerator ChangeToAttackMode()
     {
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(228, 0, 88, 255);
+        
         // Go out defend mode. Can get damage from player
         isDefendMode = false;
+        // Play Attack Animation 
+        blasterAnimator.Play("Attack");
+        float animationLength = blasterAnimator.GetCurrentAnimatorStateInfo(0).length;
+
+        // Wait to end animation and shoot Bullet
+        yield return new WaitForSeconds(animationLength);
 
         // Shoot Bullet
         while (bulletNumber < blasterBulletPrefabs.Length)
@@ -52,7 +63,7 @@ public class Blaster : Enemy
             // Wait A few time then shoot
             yield return new WaitForSeconds(shootRate);
             // Shoot type of bullet depend bullet Number
-            Instantiate(blasterBulletPrefabs[bulletNumber], transform.position, blasterBulletPrefabs[bulletNumber].transform.rotation);
+            Instantiate(blasterBulletPrefabs[bulletNumber], bulletPosition.transform.position, blasterBulletPrefabs[bulletNumber].transform.rotation);
             // Change bullet number to spawn diffirent bullet in the next shoot
             bulletNumber++;
         }

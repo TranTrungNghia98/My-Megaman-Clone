@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class AdheringSuzy : Enemy
 {
-    private float moveSpeed = 10.0f;
+    // Movement
+    private float moveSpeed = 5.0f;
     private Rigidbody2D adheringSuzyRb;
-    private float rotateTime = 1.5f;
+    private float changeDirectionTime = 1.5f;
     private bool isStopMoving = false;
+    [SerializeField] private Vector2 moveDirection;
+    
+    // Animation
+    private Animator adheringSuzyAnimator;
     // Start is called before the first frame update
     void Start()
     {
         // Find Start Position
         adheringSuzyRb = GetComponent<Rigidbody2D>();
+        adheringSuzyAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,14 +32,16 @@ public class AdheringSuzy : Enemy
 
     void Move()
     {
-        adheringSuzyRb.velocity = transform.right * moveSpeed;
+        // Open Eye When Move
+        adheringSuzyAnimator.Play("Open Eye");
+        adheringSuzyRb.velocity = moveDirection * moveSpeed;
     }
 
     IEnumerator ChangeDirection()
     {
         isStopMoving = true;
-        moveSpeed *= -1;
-        yield return new WaitForSeconds(rotateTime);
+        moveDirection *= -1;
+        yield return new WaitForSeconds(changeDirectionTime);
 
         isStopMoving = false;
     }
@@ -43,6 +51,8 @@ public class AdheringSuzy : Enemy
         // When Game Object collide Ground. Wait a few second and rotate game object
         if (collision.gameObject.CompareTag("Ground"))
         {
+            // Close Eye Not Move
+            adheringSuzyAnimator.Play("Close Eye");
             StartCoroutine(ChangeDirection());
         }
     }

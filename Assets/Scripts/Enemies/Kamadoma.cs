@@ -7,34 +7,65 @@ public class Kamadoma : Enemy
     // Start is called before the first frame update
     [SerializeField] private float jumpForce;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private Vector3 checkGroundBoxSize;
+    [SerializeField] private float checkGroundBoxDistance;
+    [SerializeField] private LayerMask groundMask;
     private GameObject player;
     private Rigidbody2D kamadomaRb;
-    private bool isOnGround = false;
+
+    // Animation
+    private Animator kamadomaAnimator;
     void Start()
     {
         player = GameObject.Find("Player");
         kamadomaRb = GetComponent<Rigidbody2D>();
+        kamadomaAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!isOnGround)
+        // Jump when on ground
+        if (isGrounded())
+        {
+            kamadomaAnimator.Play("Idle");
+            // Animation
+            LookAtPlayer();
+            Jump();
+        }
+        // Move forward when on the air
+        else
         {
             MoveForward();
         }
     }
 
-    private void Update()
+    // Create check ground box
+    bool isGrounded()
     {
-        Debug.Log("Is on Ground: " + isOnGround);
+        if (Physics2D.BoxCast(transform.position, checkGroundBoxSize, 0, -transform.up, checkGroundBoxDistance, groundMask))
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+    }
+
+    // Draw check ground box
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(transform.position - transform.up * checkGroundBoxDistance, checkGroundBoxSize);
     }
 
     void Jump()
     {
+        // Animation
+        kamadomaAnimator.Play("Jump");
         // Jump
         kamadomaRb.velocity = Vector2.up * jumpForce;
-        isOnGround = false;
     }
 
     void MoveForward()
@@ -58,16 +89,4 @@ public class Kamadoma : Enemy
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isOnGround = true;
-            // Look at player then jump to player
-            LookAtPlayer();
-            Jump();
-        }
-    }
-
 }

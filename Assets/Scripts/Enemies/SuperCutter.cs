@@ -6,7 +6,7 @@ public class SuperCutter : Enemy
 {
     private Rigidbody2D supperCutterRb;
     private Vector3 playerPosition;
-    private float jumpForce = 10.0f;
+    private float jumpForce = 5.0f;
     private float moveSpeed = 10.0f;
     private float selfDestructTime = 3.0f;
 
@@ -23,6 +23,10 @@ public class SuperCutter : Enemy
         MoveToPlayer();
     }
 
+    private void Update()
+    {
+        LookAtPlayer();
+    }
 
     void Jump()
     {
@@ -34,6 +38,19 @@ public class SuperCutter : Enemy
     {
         Vector3 moveDirection = (playerPosition - transform.position).normalized;
         supperCutterRb.velocity = new Vector2(moveDirection.x * moveSpeed, supperCutterRb.velocity.y);
+    }
+
+    void LookAtPlayer()
+    {
+        if(playerPosition.x < transform.position.x)
+        {
+            transform.localScale = new Vector3 (1, 1, 1);
+        }
+
+        else
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     IEnumerator SelfDestruct()
