@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    private PlayerAnimator playerAnimatorScript;
+    private PlayerMovement playerMovementScript;
+    private PlayerStats playerStatsScript;
+
     [SerializeField] private Transform bulletPosition;
     [SerializeField] private GameObject bulletPrefab;
     private float shootTime = 0;
     private float shootRate = 0.3f;
+    public bool isPlayingShootAnimation { get; private set; }
+    private float animationLength;
+    private void Start()
+    {
+        playerAnimatorScript = GetComponent<PlayerAnimator>();
+        playerMovementScript = GetComponent<PlayerMovement>();
+        playerStatsScript = GetComponent<PlayerStats>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -16,6 +28,9 @@ public class PlayerAttack : MonoBehaviour
         // Time next shoot = shootTime + shootRate
         if (Input.GetKeyDown(KeyCode.A) && Time.time >= shootTime + shootRate)
         {
+            // Play Shoot Animation
+            ChooseShootAnimation();
+            // Spawn Bullet
             SpawnBullet();
         }
     }
@@ -24,5 +39,42 @@ public class PlayerAttack : MonoBehaviour
     {
         shootTime = Time.time;
         Instantiate(bulletPrefab, bulletPosition.position, transform.rotation);
+    }
+
+    void ChooseShootAnimation()
+    {
+        isPlayingShootAnimation = true;
+        // Idle or run shoot animation
+        if (playerMovementScript.isGrounded())
+        {
+            if (playerMovementScript.horizontalInput == 0)
+            {
+                playerAnimatorScript.PlayAnimation("Idle Shoot");
+            }
+            
+            else
+            {
+                playerAnimatorScript.PlayAnimation("Run Shoot");
+            }
+        }
+        // Climb Shoot Animation
+        else if (playerMovementScript.isClimbingStair)
+        {
+            playerAnimatorScript.PlayAnimation("Climb Shoot");
+        }
+        // Jump Shoot Animation
+        else
+        {
+            playerAnimatorScript.PlayAnimation("Jump Shoot");
+        }
+        // Wait animation end and change shooting animation To False. So player can perform other animation
+        animationLength = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
+        StartCoroutine(ChangeIsShootingAnimationToFalse());
+    }
+
+    IEnumerator ChangeIsShootingAnimationToFalse()
+    {
+        yield return new WaitForSeconds(animationLength);
+        isPlayingShootAnimation = false;
     }
 }

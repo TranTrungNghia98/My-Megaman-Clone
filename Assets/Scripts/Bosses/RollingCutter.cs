@@ -7,7 +7,7 @@ public class RollingCutter : MonoBehaviour
     private float damage = 15.0f;
     private Rigidbody2D rollingCutterRb;
     
-    private float moveSpeed = 20.0f;
+    private float moveSpeed = 10.0f;
     // Get Player position to find Direction to move to the player
     private GameObject player;
     private Vector3 moveToPlayerDirection;

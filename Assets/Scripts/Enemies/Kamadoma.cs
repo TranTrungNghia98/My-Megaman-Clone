@@ -33,7 +33,7 @@ public class Kamadoma : Enemy
     void Jump()
     {
         // Jump
-        kamadomaRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        kamadomaRb.velocity = Vector2.up * jumpForce;
         isOnGround = false;
     }
 

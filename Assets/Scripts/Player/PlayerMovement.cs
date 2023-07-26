@@ -6,25 +6,35 @@ using UnityEngine.Tilemaps;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D playerRb;
+    private PlayerAnimator playerAnimatorScript;
+    private PlayerAttack playerAttackScript;
+    private PlayerStats playerStatsScript;
 
-    private float jumpForce = 500.0f;
+    private float jumpForce = 8.0f;
     private float moveSpeed = 7.0f;
     private float climbSpeed = 5.0f;
-    private float horizontalInput;
+    public float horizontalInput { get; private set; }
     private float verticalInput;
 
     private bool isFaceRight = true;
     private bool isColldingAStair = false;
-    private bool isClimbingStair = false;
-    private bool isOnGround = false;
+    public bool isClimbingStair { get; private set; }
     private float startGravity;
 
-    private TilemapCollider2D topLadderCollider;
+    [SerializeField] private Vector2 boxSize;
+    [SerializeField] private float distance;
+    [SerializeField] private LayerMask groundMask;
+
+    private BoxCollider2D topLadderCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        playerAnimatorScript = GetComponent<PlayerAnimator>();
+        playerAttackScript = GetComponent<PlayerAttack>();
+        playerStatsScript = GetComponent<PlayerStats>();
+
         startGravity = playerRb.gravityScale;
     }
 
@@ -34,7 +44,8 @@ public class PlayerMovement : MonoBehaviour
         Movement();
 
         // Press S to Jump
-        if (Input.GetKeyDown(KeyCode.S) && isOnGround)
+        // PLayer can jump when on ground and isn't get hurted
+        if (Input.GetKeyDown(KeyCode.S) && isGrounded() && !playerStatsScript.isHurting)
         {
             // Make sure player only can jump when player is on the ground
             Jump();
@@ -50,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
             isClimbingStair = false;
             // Reset Constraint to prevent player keep stading in the stair
             ResetGravity();
+            playerAnimatorScript.PlayAnimation("Jump");
         }
 
         // Press Arrow Key Down and on top ladder. Set Top Ladder is trigger to player can climb down the ladder
@@ -57,6 +69,34 @@ public class PlayerMovement : MonoBehaviour
         {
             topLadderCollider.isTrigger = true;
         }
+    }
+
+    private void LateUpdate()
+    {
+        // Animations
+        // Only change animation when attack or hurt animation isn't playing
+        // Run & Idle
+        if (!playerStatsScript.isHurting && !playerAttackScript.isPlayingShootAnimation)
+        {
+            if (isGrounded())
+            {
+                if (horizontalInput == 0)
+                {
+                    playerAnimatorScript.PlayAnimation("Idle");
+                }
+
+                else
+                {
+                    playerAnimatorScript.PlayAnimation("Run");
+                }
+            }
+            // Climb
+            else if (isClimbingStair)
+            {
+                playerAnimatorScript.PlayAnimation("Climb");
+            }
+        }
+
     }
 
     // Movement
@@ -79,17 +119,8 @@ public class PlayerMovement : MonoBehaviour
             // If player want to climbing or is climbing the stair, move player up and down.
             if (isClimbingStair)
             {
-                // Prevent player falling down when is climbing but not move
-                if (verticalInput == 0)
-                {
-                    playerRb.gravityScale = 0;
-                }
-
-                else
-                {
-                    ResetGravity();
-                }
-
+                // Turn off gravity to prevent gravity make player move down when climbing
+                playerRb.gravityScale = 0;
                 playerRb.velocity = new Vector2(horizontalInput * climbSpeed, verticalInput * climbSpeed);
             }
 
@@ -109,9 +140,29 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void ResetGravity()
+    public void ResetGravity()
     {
+        isClimbingStair = false;
         playerRb.gravityScale = startGravity;
+    }
+
+    public bool isGrounded()
+    {
+        if (Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, distance, groundMask))
+        {
+            isClimbingStair = false;
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(transform.position - transform.up * distance, boxSize);
     }
 
     // Rotate Face
@@ -134,8 +185,14 @@ public class PlayerMovement : MonoBehaviour
     // Jump
     void Jump()
     {
-        isOnGround = false;
-        playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        playerRb.velocity = Vector2.up * jumpForce;
+        isClimbingStair = false;
+
+        if (!playerAttackScript.isPlayingShootAnimation)
+        {
+            playerAnimatorScript.PlayAnimation("Jump");
+        }
+
     }
 
     // Collide with Stair , Ground
@@ -151,9 +208,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Stair"))
         {
-            isColldingAStair = false;
             ResetGravity();
+            isColldingAStair = false;
             isClimbingStair = false;
+            playerAnimatorScript.PlayAnimation("Idle");
         }
 
 
@@ -171,25 +229,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Top Ladder"))
         {
-            isOnGround = true;
-            isClimbingStair = false;
-            ResetGravity();
-        }
-
-        else if (collision.gameObject.CompareTag("Top Ladder"))
-        {
-            isOnGround = true;
-            topLadderCollider = collision.gameObject.GetComponent<TilemapCollider2D>();
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isOnGround = false;
+            topLadderCollider = collision.gameObject.GetComponent<BoxCollider2D>();
         }
     }
 }

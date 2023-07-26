@@ -45,7 +45,7 @@ public class ScrewDriver : Enemy
         // Shoot 2 time and Stop attack. After shoot, wait a few time then shoot again
         while (shootCount < 2 && isStartingAttack)
         {
-            Instantiate(multipleBulletPrefabs, transform.position, multipleBulletPrefabs.transform.rotation);
+            Instantiate(multipleBulletPrefabs, transform.position, transform.rotation);
             shootCount++;
             yield return new WaitForSeconds(shootRate);
         }

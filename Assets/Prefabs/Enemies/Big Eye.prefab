@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7763243047102964136}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -17.041788, y: -5.42, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 8878012662845616059}
   m_Father: {fileID: 0}
@@ -149,7 +149,7 @@ MonoBehaviour:
   damage: 40
   score: 2000
   dropItemPrefab: {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
-  jumpForce: 10
+  jumpForce: 7
   moveSpeed: 3
 --- !u!1 &8878012662845615684
 GameObject:
