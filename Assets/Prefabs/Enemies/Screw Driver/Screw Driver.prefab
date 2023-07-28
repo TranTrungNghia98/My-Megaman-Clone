@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 202208138275672408}
   - component: {fileID: 202208138275672407}
   - component: {fileID: 202208138275672404}
+  - component: {fileID: 3471412250192193338}
   m_Layer: 0
   m_Name: Screw Driver
   m_TagString: Enemy
@@ -144,8 +145,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea8674e093e8b54291e87c8c9190b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8924149245412624166, guid: 93786d3be0021f74ab9d023377dacc18, type: 3}
   health: 30
   damage: 10
   score: 600
   dropItemPrefab: {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
   multipleBulletPrefabs: {fileID: 671416561209225733, guid: 7d09658a6f34f164bb7fd7e90bf942dc, type: 3}
+--- !u!95 &3471412250192193338
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202208138275672403}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 65f20f6d835f7e0428adc0d27ce0d013, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

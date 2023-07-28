@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1595353670344921195}
   - component: {fileID: 1595353670344921173}
   - component: {fileID: 6092082473200878559}
+  - component: {fileID: 2052177510608965490}
   m_Layer: 0
   m_Name: Rolling Cutter
   m_TagString: Rolling Cutter
@@ -59,9 +60,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07420063, y: 0}
+  m_Offset: {x: -0, y: 0.071284294}
   serializedVersion: 2
-  m_Radius: 0.36329937
+  m_Radius: 0.3662157
 --- !u!50 &1595353670344921173
 Rigidbody2D:
   serializedVersion: 4
@@ -128,9 +129,30 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.625, y: 0.875}
+  m_Size: {x: 0.875, y: 0.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2052177510608965490
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595353670344921193}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0cde5a354c8f9f74c991636f7e41f81b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

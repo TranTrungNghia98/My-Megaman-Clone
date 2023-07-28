@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 6
   m_Name: Roling Cutter Spawn Position
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5855457530307365122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 1.65, z: 0}
+  m_LocalPosition: {x: -1.5, y: 0.64, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
   m_Father: {fileID: 5855457530419627801}
@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 5855457530419627803}
   - component: {fileID: 5855457530419627802}
   - component: {fileID: 5855457530419627807}
+  - component: {fileID: 856882005413177934}
   m_Layer: 6
   m_Name: Cut Man
   m_TagString: Enemy
@@ -182,8 +183,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0, y: 0.050105333}
+  m_Size: {x: 1, y: 1.8997893}
   m_Direction: 0
 --- !u!50 &5855457530419627802
 Rigidbody2D:
@@ -218,12 +219,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f066987a274898c4a8b1c72709dfca1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 3235911250889403426, guid: ac34fd67fdc146c4abc21883a1346e30, type: 3}
   health: 100
   damage: 10
   score: 7000
   dropItemPrefab: {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
   rollingCutterPrefab: {fileID: 1595353670344921193, guid: 0426db99dec1fe74a8d41807710fb2c9, type: 3}
   rollingCutterPosition: {fileID: 5855457530307365122}
+  checkGroundBoxSize: {x: 1.5, y: 0.1, z: 0}
+  checkGroundDistance: 0.95
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!95 &856882005413177934
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5855457530419627806}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ccada89840a7af4e9c84917d48c9cad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5855457531147798642
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +296,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0, y: 0.050105333}
+  m_Size: {x: 1, y: 1.8997893}
   m_Direction: 0

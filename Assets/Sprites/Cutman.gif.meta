@@ -4,58 +4,58 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -872037170932462618
-    second: Cutman Idle
+    second: Idle 0
   - first:
       213: -5182809059104848383
-    second: Cutman_1
+    second: Idle 1
   - first:
       213: 6683073687614369225
-    second: Cutman_2
+    second: Jump
   - first:
       213: 7189427116833835967
-    second: Cutman_3
+    second: Run 0
   - first:
       213: 2779366128168061156
-    second: Cutman_4
+    second: Run 1
   - first:
       213: 5536518624244728764
-    second: Cutman_5
+    second: Run 2
   - first:
       213: 7011564387304724123
-    second: Cutman_6
+    second: Throw Cutter 0
   - first:
       213: 5319666462988525169
-    second: Cutman_7
+    second: Throw Cutter 1
   - first:
       213: -7558109809028885390
-    second: Cutman_8
+    second: Idle Without Cutter 0
   - first:
       213: 3461962262878335234
-    second: Cutman_9
+    second: Idle Without Cutter 1
   - first:
       213: 2738921003644246403
-    second: Cutman_10
+    second: Jump Without Cutter
   - first:
       213: -4519822111735689516
-    second: Cutman_11
+    second: Run Without Cutter 0
   - first:
       213: -1940831437707147353
-    second: Cutman_12
+    second: Run Without Cutter 1
   - first:
       213: 8444057864639025726
-    second: Cutman_13
+    second: Run Without Cutter 2
   - first:
       213: -7132843715818687302
     second: Rolling Cutter 0
   - first:
       213: 3560315495949120738
-    second: Rolling Cutter 1
+    second: Rolling Cutter 0
   - first:
       213: 1614646902031973310
-    second: Rolling Cutter 2
+    second: Rolling Cutter 0
   - first:
       213: -7602421715578549117
-    second: Rolling Cutter 3
+    second: Rolling Cutter 0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -158,7 +158,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cutman Idle
+      name: Idle 0
       rect:
         serializedVersion: 2
         x: 5
@@ -166,7 +166,7 @@ TextureImporter:
         width: 24
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -179,7 +179,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_1
+      name: Idle 1
       rect:
         serializedVersion: 2
         x: 40
@@ -187,7 +187,7 @@ TextureImporter:
         width: 23
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -200,7 +200,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_2
+      name: Jump
       rect:
         serializedVersion: 2
         x: 76
@@ -208,7 +208,7 @@ TextureImporter:
         width: 24
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,7 +221,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_3
+      name: Run 0
       rect:
         serializedVersion: 2
         x: 115
@@ -229,7 +229,7 @@ TextureImporter:
         width: 24
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,7 +242,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_4
+      name: Run 1
       rect:
         serializedVersion: 2
         x: 149
@@ -250,7 +250,7 @@ TextureImporter:
         width: 18
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -263,7 +263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_5
+      name: Run 2
       rect:
         serializedVersion: 2
         x: 177
@@ -271,7 +271,7 @@ TextureImporter:
         width: 23
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -284,7 +284,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_6
+      name: Throw Cutter 0
       rect:
         serializedVersion: 2
         x: 207
@@ -292,7 +292,7 @@ TextureImporter:
         width: 23
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -305,7 +305,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_7
+      name: Throw Cutter 1
       rect:
         serializedVersion: 2
         x: 242
@@ -313,7 +313,7 @@ TextureImporter:
         width: 30
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -326,7 +326,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_8
+      name: Idle Without Cutter 0
       rect:
         serializedVersion: 2
         x: 7
@@ -334,7 +334,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -347,7 +347,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_9
+      name: Idle Without Cutter 1
       rect:
         serializedVersion: 2
         x: 40
@@ -355,7 +355,7 @@ TextureImporter:
         width: 23
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -368,7 +368,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_10
+      name: Jump Without Cutter
       rect:
         serializedVersion: 2
         x: 73
@@ -376,7 +376,7 @@ TextureImporter:
         width: 24
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -389,7 +389,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_11
+      name: Run Without Cutter 0
       rect:
         serializedVersion: 2
         x: 107
@@ -397,7 +397,7 @@ TextureImporter:
         width: 24
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -410,7 +410,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_12
+      name: Run Without Cutter 1
       rect:
         serializedVersion: 2
         x: 139
@@ -418,7 +418,7 @@ TextureImporter:
         width: 18
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -431,7 +431,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cutman_13
+      name: Run Without Cutter 2
       rect:
         serializedVersion: 2
         x: 167
@@ -439,7 +439,7 @@ TextureImporter:
         width: 22
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -452,7 +452,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolling Cutter 0
+      name: Rolling Cutter 1
       rect:
         serializedVersion: 2
         x: 198
@@ -460,7 +460,7 @@ TextureImporter:
         width: 10
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -473,7 +473,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolling Cutter 1
+      name: Rolling Cutter 2
       rect:
         serializedVersion: 2
         x: 215
@@ -481,7 +481,7 @@ TextureImporter:
         width: 14
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -494,7 +494,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolling Cutter 2
+      name: Rolling Cutter 3
       rect:
         serializedVersion: 2
         x: 238
@@ -502,7 +502,7 @@ TextureImporter:
         width: 10
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -515,7 +515,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolling Cutter 3
+      name: Rolling Cutter 0
       rect:
         serializedVersion: 2
         x: 256
@@ -523,7 +523,7 @@ TextureImporter:
         width: 14
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

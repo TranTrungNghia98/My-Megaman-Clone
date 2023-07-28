@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7763243047102964134}
   - component: {fileID: 7763243047102964135}
   - component: {fileID: 7763243047102964133}
+  - component: {fileID: 2310588112395328148}
   m_Layer: 6
   m_Name: Big Eye
   m_TagString: Enemy
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1942664421320450992, guid: e7e32b5053b33a84a880891c4cc575e2, type: 3}
+  m_Sprite: {fileID: -4290290125472745480, guid: e7e32b5053b33a84a880891c4cc575e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,18 +121,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.04382825}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2.5}
+    oldSize: {x: 2, y: 3}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2.5}
+  m_Size: {x: 2, y: 2.5876565}
   m_EdgeRadius: 0
 --- !u!114 &7763243047102964133
 MonoBehaviour:
@@ -145,12 +146,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9101bc643a34f02479f6ca849b2053e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 3235911250889403426, guid: ac34fd67fdc146c4abc21883a1346e30, type: 3}
   health: 100
   damage: 40
   score: 2000
   dropItemPrefab: {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
   jumpForce: 7
   moveSpeed: 3
+  checkGroundBoxSize: {x: 2, y: 0.1, z: 0}
+  checkGroundBoxDistance: 1.41
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!95 &2310588112395328148
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763243047102964136}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 649c5b100ab3b8e47adadaf274870f1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8878012662845615684
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,20 +219,20 @@ BoxCollider2D:
   m_GameObject: {fileID: 8878012662845615684}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 03bb8e9992462ea408a0f7729d02ef27, type: 2}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.04382825}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2.5}
+    oldSize: {x: 2, y: 3}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2.5}
+  m_Size: {x: 2, y: 2.5876565}
   m_EdgeRadius: 0

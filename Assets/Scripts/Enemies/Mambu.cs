@@ -5,18 +5,21 @@ using UnityEngine;
 public class Mambu : Enemy
 {
     private Rigidbody2D mambuRb;
-    private float moveSpeed = 7.0f;
+    private float moveSpeed = 5.0f;
     private bool isDefendMode;
-    private float switchModeTime = 2.0f;
-    private float selfDestructTime = 4.0f;
+    private float switchModeTime = 1.0f;
+    private float selfDestructTime = 6.0f;
     [SerializeField] GameObject multipleBulletPrefab;
+
+    private Animator mambuAnimator;
     // Start is called before the first frame update
     void Start()
     {
         mambuRb = GetComponent<Rigidbody2D>();
-        // Choose Random Mode To Create interesting experience
-        ChooseRandomMode();
-
+        mambuAnimator = GetComponent<Animator>();
+        // Go Defend Mode and Move
+        StartCoroutine(GoToDefendMode());
+      
         // Destroy after few seconds
         StartCoroutine(SelfDestruct());
     }
@@ -31,21 +34,21 @@ public class Mambu : Enemy
     }
 
     // Choose Random Mode
-    private void ChooseRandomMode()
-    {
-        // Create a number to choose mode
-        float randomNumber = Random.Range(0.0f, 1.0f);
-        // Generate 50 % Go To Defend Mode or Go To Attack Mode
-        if (randomNumber <= 0.5f)
-        {
-            StartCoroutine(GoToDefendMode());
-        }
+    //private void ChooseRandomMode()
+    //{
+    //    // Create a number to choose mode
+    //    float randomNumber = Random.Range(0.0f, 1.0f);
+    //    // Generate 50 % Go To Defend Mode or Go To Attack Mode
+    //    if (randomNumber <= 0.5f)
+    //    {
+    //        StartCoroutine(GoToDefendMode());
+    //    }
 
-        else
-        {
-            StartCoroutine(GoToAttackMode());
-        }
-    }
+    //    else
+    //    {
+    //        StartCoroutine(GoToAttackMode());
+    //    }
+    //}
 
     private void MoveForward()
     {
@@ -56,11 +59,12 @@ public class Mambu : Enemy
     private IEnumerator GoToDefendMode()
     {
         // Turn defend mode = true. So gameobject can't get damage when in defend mode
+        
         isDefendMode = true;
         ContinueMoving();
-        // Change Color to easy recognize in defend Mode
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(113, 228, 0, 255);
-        
+        // Play Defend Animation
+        mambuAnimator.Play("Defend");
+
         // Wait few second and change Mode
         yield return new WaitForSeconds(switchModeTime);
         // Shoot Bullets
@@ -73,8 +77,8 @@ public class Mambu : Enemy
         // Turn defend mode = false. So game object can get damage from player
         isDefendMode = false;
 
-        // Turn to origin color
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(252, 116, 96, 255);
+        // Play Attack Animation
+        mambuAnimator.Play("Attack");
 
         // Stop Moving And Attack
         StopMoving();

@@ -14,7 +14,7 @@ public class RollingCutter : MonoBehaviour
     // Get player Stats Script
     private PlayerStats playerStatsScript;
     // Set Time to move to player. If game object can hit player in this time. It will turn back to the boss
-    private float moveToPlayerTime = 2.0f;
+    private float moveToPlayerTime = 1.5f;
     // Get Cut Man Boss Position to find direction to move to the boss
     private GameObject cutManBoss;
     private CutMan cutManScript;

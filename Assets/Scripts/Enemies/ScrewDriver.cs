@@ -11,10 +11,14 @@ public class ScrewDriver : Enemy
     private GameObject player;
     private float attackRange = 10;
     private bool isStartingAttack = false;
+
+    // Animation
+    private Animator screwDriverAnimator;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+        screwDriverAnimator = GetComponent<Animator>();
 
         StartCoroutine(StartAttack());
     }
@@ -40,8 +44,11 @@ public class ScrewDriver : Enemy
     // Move To Attack Poistion and Shoot 2 time and stop attack
     private IEnumerator StartAttack()
     {
-        Debug.Log("Attack");
-        transform.localPosition = transform.localPosition + transform.up;
+        // Animation
+        screwDriverAnimator.Play("Attack");
+
+        // Change Position
+        //transform.localPosition = transform.localPosition + transform.up;
         // Shoot 2 time and Stop attack. After shoot, wait a few time then shoot again
         while (shootCount < 2 && isStartingAttack)
         {
@@ -59,15 +66,15 @@ public class ScrewDriver : Enemy
     // Move to stat Position, wait a few second and attack again
     private IEnumerator StopAttack()
     {
-        Debug.Log("Stop Attack");
+        // Animation
+        screwDriverAnimator.Play("Defend");
         // Reset Shoot Count, make game object can shoot again
         shootCount = 0;
-
-        transform.localPosition = transform.localPosition - transform.up;
-
-        yield return new WaitForSeconds(shootRate);
+        // Change position
+        //transform.localPosition = transform.localPosition - transform.up;
 
         // After stop attack a few seconds, start attack again
+        yield return new WaitForSeconds(shootRate);
         StartCoroutine(StartAttack());
     }
 

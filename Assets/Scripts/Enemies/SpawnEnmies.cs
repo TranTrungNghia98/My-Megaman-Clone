@@ -7,10 +7,10 @@ public class SpawnEnmies : MonoBehaviour
     private bool inRangeSpawn = false;
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] GameObject spawnPosition;
-    private float starTime = 2.0f;
-    private float spawnRate = 1.5f;
+    [SerializeField] private float starTime;
+    [SerializeField] private float spawnRate;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         InvokeRepeating("SpawnEnemy", starTime, spawnRate);
     }

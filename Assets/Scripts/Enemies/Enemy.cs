@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private GameObject explosionPrefab;
+
     [SerializeField] protected float health;
     [SerializeField] protected float damage;
     [SerializeField] protected int score;
@@ -33,7 +35,10 @@ public class Enemy : MonoBehaviour
         // Destroy Enemy when health <= 0
         if (health <= 0)
         {
+            // Destroy game object
             Destroy(gameObject);
+            // Explosion Effect
+            Instantiate(explosionPrefab, transform.position, explosionPrefab.transform.rotation);
             // Add Score and 20% to Drop Item
             DropItem();
             gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();

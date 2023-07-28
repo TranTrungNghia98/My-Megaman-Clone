@@ -133,12 +133,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -201525515258351744, guid: e7e32b5053b33a84a880891c4cc575e2, type: 3}
+  m_Sprite: {fileID: -4970396681004785635, guid: e7e32b5053b33a84a880891c4cc575e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.9375, y: 0.6875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -182,8 +182,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.875, y: 0.625}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.9375, y: 0.6875}
+    newSize: {x: 0.9375, y: 0.6875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9101bc643a34f02479f6ca849b2053e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8924149245412624166, guid: 93786d3be0021f74ab9d023377dacc18, type: 3}
   health: 10
   damage: 10
   score: 200

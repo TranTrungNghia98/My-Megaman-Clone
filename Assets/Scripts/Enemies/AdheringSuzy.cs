@@ -5,7 +5,7 @@ using UnityEngine;
 public class AdheringSuzy : Enemy
 {
     // Movement
-    private float moveSpeed = 5.0f;
+    [SerializeField] private float moveSpeed;
     private Rigidbody2D adheringSuzyRb;
     private float changeDirectionTime = 1.5f;
     private bool isStopMoving = false;

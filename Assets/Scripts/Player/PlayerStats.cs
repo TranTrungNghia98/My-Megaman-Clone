@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    [SerializeField] private GameObject explosionPrefab;
     private PlayerAnimator playerAnimatorScript;
     private PlayerMovement playerMovementScript;
-    private SpriteRenderer spriteRenderer;
 
     private float playerHealth = 100.0f;
     public bool isHurting { get; private set; }
@@ -18,7 +19,6 @@ public class PlayerStats : MonoBehaviour
     {
         playerAnimatorScript = GetComponent<PlayerAnimator>();
         playerMovementScript = GetComponent<PlayerMovement>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -70,7 +70,10 @@ public class PlayerStats : MonoBehaviour
     {
         if (playerHealth <= 0)
         {
+            // Destroy player
             Destroy(gameObject);
+            // Explosion Effect
+            Instantiate(explosionPrefab, transform.position, explosionPrefab.transform.rotation);
         }
     }
 
@@ -81,6 +84,12 @@ public class PlayerStats : MonoBehaviour
             // Get Bullet Damage
             float enemyBulletDamage = 10.0f;
             GetDamage(enemyBulletDamage);
+        }
+
+        else if (collision.gameObject.CompareTag("DeadZone"))
+        {
+            float damage = 100;
+            GetDamage(damage);
         }
     }
 }

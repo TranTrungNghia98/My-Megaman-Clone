@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0f88c94d6d1d246addd61cd5e09142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8924149245412624166, guid: 93786d3be0021f74ab9d023377dacc18, type: 3}
   health: 10
   damage: 5
   score: 500
