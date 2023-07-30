@@ -45,9 +45,9 @@ public class PlayerMovement : MonoBehaviour
         // Player can move around with arrow keys
         Movement();
 
-        // Press S to Jump
+        // Press X to Jump
         // PLayer can jump when on ground and isn't get hurted
-        if (Input.GetKeyDown(KeyCode.S) && isGrounded() && !playerStatsScript.isHurting)
+        if (Input.GetKeyDown(KeyCode.X) && isGrounded() && !playerStatsScript.isHurting)
         {
             // Make sure player only can jump when player is on the ground
             Jump();
@@ -56,14 +56,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // Press S to Dropdown from the stair
-        if (Input.GetKeyDown(KeyCode.S))
+        // Press X to Dropdown from the stair
+        if (Input.GetKeyDown(KeyCode.X))
         {
             // Make player can Dropdown when player is climbing on the stair
             isClimbingStair = false;
             // Reset Constraint to prevent player keep stading in the stair
             ResetGravity();
-            playerAnimatorScript.PlayAnimation("Jump");
         }
 
         // Press Arrow Key Down and on top ladder. Set Top Ladder is trigger to player can climb down the ladder
@@ -97,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimatorScript.PlayAnimation("Climb");
             }
+
         }
 
     }
@@ -189,13 +189,8 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRb.velocity = Vector2.up * jumpForce;
         isClimbingStair = false;
-
         //  Animation
-        if (!playerAttackScript.isPlayingShootAnimation)
-        {
-            playerAnimatorScript.PlayAnimation("Jump");
-        }
-
+        playerAnimatorScript.PlayAnimation("Jump");
         // Sound Effect
         playerSoundEffectScript.PlaySoundEffect("Jump");
     }

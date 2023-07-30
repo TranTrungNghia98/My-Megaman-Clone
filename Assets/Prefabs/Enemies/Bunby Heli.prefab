@@ -140,7 +140,9 @@ MonoBehaviour:
   health: 10
   damage: 5
   score: 500
-  dropItemPrefab: {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
+  dropItemPrefabs:
+  - {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
+  - {fileID: 5840610438378381247, guid: f17be609240ed2a44831af5ff8ac30a1, type: 3}
 --- !u!114 &4892676078785809623
 MonoBehaviour:
   m_ObjectHideFlags: 0

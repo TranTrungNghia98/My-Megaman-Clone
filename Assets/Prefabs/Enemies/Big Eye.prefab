@@ -147,12 +147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9101bc643a34f02479f6ca849b2053e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtSound: {fileID: 8300000, guid: 5620ef0845fa17e4aa205189bbb42e05, type: 3}
   explosionPrefab: {fileID: 3235911250889403426, guid: ac34fd67fdc146c4abc21883a1346e30, type: 3}
   health: 100
   damage: 40
   score: 2000
-  dropItemPrefab: {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
+  dropItemPrefabs:
+  - {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
+  - {fileID: 5840610438378381247, guid: f17be609240ed2a44831af5ff8ac30a1, type: 3}
   jumpForce: 7
   moveSpeed: 3
   checkGroundBoxSize: {x: 2, y: 0.1, z: 0}

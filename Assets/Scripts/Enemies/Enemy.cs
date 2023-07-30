@@ -10,10 +10,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float health;
     [SerializeField] protected float damage;
     [SerializeField] protected int score;
-    [SerializeField] GameObject dropItemPrefab;
+    [SerializeField] GameObject[] dropItemPrefabs;
     protected PlayerStats playerStatsScript;
     protected GameManager gameManagerScript;
-
+    
     protected virtual void GetDamage()
     {
         float damage = 10;
@@ -23,12 +23,17 @@ public class Enemy : MonoBehaviour
     protected void DropItem()
     {
         float randomNumber = Random.Range(0.0f, 1.0f);
-        // 20% drop item
-        if (randomNumber <= 0.2)
+        // 80 % drop small health
+        if (randomNumber <= 0.8)
         {
-            Instantiate(dropItemPrefab, transform.position, dropItemPrefab.transform.rotation);
+            Instantiate(dropItemPrefabs[0], transform.position, dropItemPrefabs[0].transform.rotation);
         }
         
+        // 20 % drop big health
+        else
+        {
+            Instantiate(dropItemPrefabs[1], transform.position, dropItemPrefabs[1].transform.rotation);
+        }
     }
 
     protected void CheckHealth()

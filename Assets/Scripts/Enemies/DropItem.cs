@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DropItem : MonoBehaviour
 {
+    private PlayerStats playerStatsScript;
     private Rigidbody2D dropItemRb;
+    [SerializeField] int healthPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,21 +19,14 @@ public class DropItem : MonoBehaviour
         
     }
 
-    protected void StopFalling()
-    {
-        dropItemRb.constraints = RigidbodyConstraints2D.FreezePositionY;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            StopFalling();
-        }
-
-        else if (collision.gameObject.CompareTag("Player"))
-        {
+            playerStatsScript = collision.gameObject.GetComponent<PlayerStats>();
+            playerStatsScript.IncreaseHealth(healthPoint);
             Destroy(gameObject);
         }
     }
+
 }

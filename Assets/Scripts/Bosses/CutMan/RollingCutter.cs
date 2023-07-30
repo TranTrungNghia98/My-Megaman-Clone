@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class RollingCutter : MonoBehaviour
 {
@@ -58,6 +59,15 @@ public class RollingCutter : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        // If Player or Boss destroyed . Destroy game object
+        if (GameObject.FindObjectOfType<PlayerStats>() == null || GameObject.FindObjectOfType<CutMan>() == null)
+        {
+            SelfDestruct();
+        }
+    }
+
     // If game object can hit player in this time. It will turn back to the boss
     IEnumerator WaitToTurnBack(float timeToMoveBack)
     {
@@ -76,6 +86,11 @@ public class RollingCutter : MonoBehaviour
     {
         Vector3 moveToBossDirection = (cutManBoss.transform.position - transform.position).normalized;
         rollingCutterRb.velocity = moveToBossDirection * moveSpeed;
+    }
+
+    void SelfDestruct()
+    {
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

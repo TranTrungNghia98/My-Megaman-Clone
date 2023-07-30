@@ -24,9 +24,9 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // If player press A and current time pass time need to wait to need shoot. Player can shoot
+        // If player press Z and current time pass time need to wait to need shoot. Player can shoot
         // Time next shoot = shootTime + shootRate
-        if (Input.GetKeyDown(KeyCode.A) && Time.time >= shootTime + shootRate)
+        if (Input.GetKeyDown(KeyCode.Z) && Time.time >= shootTime + shootRate)
         {
             // Play Shoot Animation
             ChooseShootAnimation();

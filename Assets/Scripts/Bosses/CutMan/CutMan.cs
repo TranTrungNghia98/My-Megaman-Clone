@@ -28,7 +28,6 @@ public class CutMan : Enemy
     private float jumpRange = 3.0f;
     private float currentDistance;
     private bool isTurnRight = false;
-
     // Check ground variable
     [SerializeField] private Vector3 checkGroundBoxSize;
     [SerializeField] private float checkGroundDistance;
@@ -92,6 +91,13 @@ public class CutMan : Enemy
     {
         CheckDistance();
         LookAtPlayer();
+    }
+
+    // Stats Method
+    // Use for health UI
+    public float GetHealth()
+    {
+        return health;
     }
 
     // Movement Methods

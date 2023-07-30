@@ -78,6 +78,16 @@ public class PlayerStats : MonoBehaviour
             // Explosion Effect
             Instantiate(explosionPrefab, transform.position, explosionPrefab.transform.rotation);
         }
+
+        else if (playerHealth > 100)
+        {
+            playerHealth = 100;
+        }
+    }
+
+    public void IncreaseHealth(int healthPoint)
+    {
+        playerHealth += healthPoint;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

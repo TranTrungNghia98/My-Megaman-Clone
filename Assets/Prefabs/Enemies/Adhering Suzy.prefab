@@ -99,12 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 142c52e29d0cca044ae56e7cc501f11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtSound: {fileID: 8300000, guid: 5620ef0845fa17e4aa205189bbb42e05, type: 3}
   explosionPrefab: {fileID: 8924149245412624166, guid: 93786d3be0021f74ab9d023377dacc18, type: 3}
   health: 30
   damage: 10
   score: 300
-  dropItemPrefab: {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
+  dropItemPrefabs:
+  - {fileID: 5840610438378381247, guid: 888a3157f2bc21f40afb0edd335dfd20, type: 3}
+  - {fileID: 5840610438378381247, guid: f17be609240ed2a44831af5ff8ac30a1, type: 3}
   moveSpeed: 0
   moveDirection: {x: 0, y: 0}
 --- !u!61 &626298104601527022
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 626298104601527017}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 03bb8e9992462ea408a0f7729d02ef27, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

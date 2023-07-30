@@ -19,6 +19,8 @@ TagManager:
   - Open Door
   - Close Door
   - Active Enemy Area
+  - Small Health
+  - Big Health
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - UI
   - Enemy
   - Player
-  - 
+  - Item
   - 
   - 
   - 
