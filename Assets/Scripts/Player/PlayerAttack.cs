@@ -6,7 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     private PlayerAnimator playerAnimatorScript;
     private PlayerMovement playerMovementScript;
-    private PlayerStats playerStatsScript;
+    private PlayerSoundEffect playerSoundEffectScript;
 
     [SerializeField] private Transform bulletPosition;
     [SerializeField] private GameObject bulletPrefab;
@@ -18,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
     {
         playerAnimatorScript = GetComponent<PlayerAnimator>();
         playerMovementScript = GetComponent<PlayerMovement>();
-        playerStatsScript = GetComponent<PlayerStats>();
+        playerSoundEffectScript = GetComponent<PlayerSoundEffect>();
     }
 
     // Update is called once per frame
@@ -30,6 +30,8 @@ public class PlayerAttack : MonoBehaviour
         {
             // Play Shoot Animation
             ChooseShootAnimation();
+            // Sound Effect
+            playerSoundEffectScript.PlaySoundEffect("Shoot");
             // Spawn Bullet
             SpawnBullet();
         }

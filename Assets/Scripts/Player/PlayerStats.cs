@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private GameObject explosionPrefab;
     private PlayerAnimator playerAnimatorScript;
     private PlayerMovement playerMovementScript;
+    private PlayerSoundEffect playerSoundEffectScript;
 
     private float playerHealth = 100.0f;
     public bool isHurting { get; private set; }
@@ -19,6 +20,7 @@ public class PlayerStats : MonoBehaviour
     {
         playerAnimatorScript = GetComponent<PlayerAnimator>();
         playerMovementScript = GetComponent<PlayerMovement>();
+        playerSoundEffectScript = GetComponent<PlayerSoundEffect>();
     }
 
     // Update is called once per frame
@@ -46,7 +48,8 @@ public class PlayerStats : MonoBehaviour
             playerAnimatorScript.PlayAnimation("Hurt");
             hurtingTime = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
             StartCoroutine(TurnIsHurtingToFalse());
-
+            // Sound Effect
+            playerSoundEffectScript.PlaySoundEffect("Hurt");
             // Player when fall down when get damaged
             playerMovementScript.ResetGravity();
             StartCoroutine(DeactiveInvincibleMode());

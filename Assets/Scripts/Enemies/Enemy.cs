@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    // Logic
     [SerializeField] private GameObject explosionPrefab;
 
     [SerializeField] protected float health;

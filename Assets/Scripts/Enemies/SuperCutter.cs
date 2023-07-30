@@ -10,10 +10,15 @@ public class SuperCutter : Enemy
     private float moveSpeed = 10.0f;
     private float selfDestructTime = 3.0f;
 
+    // Sound Effect
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip cuttingSound;
+
     // Start is called before the first frame update
     void Start()
     {
         supperCutterRb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
         Jump();
         StartCoroutine(SelfDestruct());
     }
@@ -32,6 +37,7 @@ public class SuperCutter : Enemy
     {
         playerPosition = GameObject.Find("Player").transform.position;
         supperCutterRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        audioSource.PlayOneShot(cuttingSound);
     }
 
     void MoveToPlayer()

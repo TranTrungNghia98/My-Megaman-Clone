@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ScrewDriver : Enemy
 {
+    
     [SerializeField] private GameObject multipleBulletPrefabs;
+    [SerializeField] private AudioClip shootSound;
+    private AudioSource audioSource;
     private float shootCount = 0;
     private float shootRate = 1.5f;
 
@@ -19,6 +22,7 @@ public class ScrewDriver : Enemy
     {
         player = GameObject.Find("Player");
         screwDriverAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         StartCoroutine(StartAttack());
     }
@@ -52,7 +56,11 @@ public class ScrewDriver : Enemy
         // Shoot 2 time and Stop attack. After shoot, wait a few time then shoot again
         while (shootCount < 2 && isStartingAttack)
         {
+            //Sound Effect
+            audioSource.PlayOneShot(shootSound);
+            // Spawn Bullet
             Instantiate(multipleBulletPrefabs, transform.position, transform.rotation);
+            // Increase shoot count to prevent infinite loop
             shootCount++;
             yield return new WaitForSeconds(shootRate);
         }

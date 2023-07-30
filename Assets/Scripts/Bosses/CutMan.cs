@@ -39,11 +39,17 @@ public class CutMan : Enemy
     private bool isAttackAnimationPlaying;
     private float attackAnimationTime;
 
+    // Sound Effect Variable
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip hurtSound;
+    [SerializeField] private AudioClip jumpSound;
+
     // Start is called before the first frame update
     void Start()
     {
         cutManRb = GetComponent<Rigidbody2D>();
         cutmanAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         player = GameObject.Find("Player");
         // Only Attack when have rolling cutter and on the ground
@@ -118,6 +124,8 @@ public class CutMan : Enemy
         if (!isAttackAnimationPlaying && !isHurting)
         {
             PlayJumpAnimation();
+            // Sound Effect
+            audioSource.PlayOneShot(jumpSound);
         }
 
         // Logic
@@ -206,6 +214,8 @@ public class CutMan : Enemy
     {
         // Play Hurt Animation
         PlayHurtAnimation();
+        // Play Sound Effect
+        audioSource.PlayOneShot(hurtSound);
         // Get Damage
         base.GetDamage();
         // Turn on Invicible so boss won't get damage in a few seconds

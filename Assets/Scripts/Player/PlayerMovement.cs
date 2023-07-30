@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAnimator playerAnimatorScript;
     private PlayerAttack playerAttackScript;
     private PlayerStats playerStatsScript;
+    private PlayerSoundEffect playerSoundEffectScript;
 
     private float jumpForce = 8.0f;
     private float moveSpeed = 7.0f;
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnimatorScript = GetComponent<PlayerAnimator>();
         playerAttackScript = GetComponent<PlayerAttack>();
         playerStatsScript = GetComponent<PlayerStats>();
+        playerSoundEffectScript = GetComponent<PlayerSoundEffect>();
 
         startGravity = playerRb.gravityScale;
     }
@@ -188,11 +190,14 @@ public class PlayerMovement : MonoBehaviour
         playerRb.velocity = Vector2.up * jumpForce;
         isClimbingStair = false;
 
+        //  Animation
         if (!playerAttackScript.isPlayingShootAnimation)
         {
             playerAnimatorScript.PlayAnimation("Jump");
         }
 
+        // Sound Effect
+        playerSoundEffectScript.PlaySoundEffect("Jump");
     }
 
     // Collide with Stair , Ground

@@ -19,6 +19,10 @@ public class RollingCutter : MonoBehaviour
     private GameObject cutManBoss;
     private CutMan cutManScript;
     private bool isMoveToBoss = false;
+
+    // Sound Effect
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip cuttingSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +34,10 @@ public class RollingCutter : MonoBehaviour
         // Get Boss
         cutManBoss = GameObject.Find("Cut Man");
         cutManScript = cutManBoss.GetComponent<CutMan>();
+        // Get Audio Source
+        audioSource = GetComponent<AudioSource>();
+        // Play Sound Effect
+        audioSource.PlayOneShot(cuttingSound);
         // Find Direcion to player
         moveToPlayerDirection = (player.transform.position - transform.position).normalized;
         // Move To Player and wait a few second to turn back the back

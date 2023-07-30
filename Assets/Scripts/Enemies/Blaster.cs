@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Blaster : Enemy
 {
+    // Audio Variable
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip shootSound;
+    [SerializeField] private AudioClip defendSound;
+    // Attack Variable
     [SerializeField] GameObject[] blasterBulletPrefabs;
     [SerializeField] GameObject bulletPosition;
     private int bulletNumber = 0;
     private bool isDefendMode = false;
     private float shootRate = 0.5f;
-
+    // Animation Variable
     private Animator blasterAnimator;
     // Start is called before the first frame update
     void Start()
     {
         blasterAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         // Choose Random Mode from beginning
         ChooseRandomMode();
     }
@@ -62,6 +68,8 @@ public class Blaster : Enemy
         {
             // Wait A few time then shoot
             yield return new WaitForSeconds(shootRate);
+            //Sound Effect
+            audioSource.PlayOneShot(shootSound);
             // Shoot type of bullet depend bullet Number
             Instantiate(blasterBulletPrefabs[bulletNumber], bulletPosition.transform.position, blasterBulletPrefabs[bulletNumber].transform.rotation);
             // Change bullet number to spawn diffirent bullet in the next shoot
@@ -83,6 +91,12 @@ public class Blaster : Enemy
         {
             float damage = 10;
             health -= damage;
+        }
+
+        else
+        {
+            // Play Defend sound
+            audioSource.PlayOneShot(defendSound);
         }
     }
 

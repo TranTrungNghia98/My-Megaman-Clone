@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 142c52e29d0cca044ae56e7cc501f11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtSound: {fileID: 8300000, guid: 5620ef0845fa17e4aa205189bbb42e05, type: 3}
   explosionPrefab: {fileID: 8924149245412624166, guid: 93786d3be0021f74ab9d023377dacc18, type: 3}
   health: 30
   damage: 10

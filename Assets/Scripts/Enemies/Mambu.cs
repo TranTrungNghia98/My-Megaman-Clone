@@ -9,14 +9,20 @@ public class Mambu : Enemy
     private bool isDefendMode;
     private float switchModeTime = 1.0f;
     private float selfDestructTime = 6.0f;
-    [SerializeField] GameObject multipleBulletPrefab;
 
+    // Audio Variable
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip shootSound;
+    [SerializeField] private AudioClip defendSound;
+    [SerializeField] GameObject multipleBulletPrefab;
+    // Animation Variable
     private Animator mambuAnimator;
     // Start is called before the first frame update
     void Start()
     {
         mambuRb = GetComponent<Rigidbody2D>();
         mambuAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         // Go Defend Mode and Move
         StartCoroutine(GoToDefendMode());
       
@@ -77,11 +83,15 @@ public class Mambu : Enemy
         // Turn defend mode = false. So game object can get damage from player
         isDefendMode = false;
 
-        // Play Attack Animation
-        mambuAnimator.Play("Attack");
-
         // Stop Moving And Attack
         StopMoving();
+
+        // Play Attack Animation
+        mambuAnimator.Play("Attack");
+        //Sound Effect
+        audioSource.PlayOneShot(shootSound);
+
+        // Spawn Bullets
         Instantiate(multipleBulletPrefab, transform.position, multipleBulletPrefab.transform.rotation);
 
         // Wait few second and change Mode
@@ -117,6 +127,12 @@ public class Mambu : Enemy
         {
             float damage = 10;
             health -= damage;
+        }
+
+         else
+        {
+            // Play Defend sound
+            audioSource.PlayOneShot(defendSound);
         }
     }
 

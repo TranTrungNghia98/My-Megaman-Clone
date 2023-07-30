@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Kamadoma : Enemy
 {
-    // Start is called before the first frame update
+    // Movement Variable
     [SerializeField] private float jumpForce;
     [SerializeField] private float moveSpeed;
     [SerializeField] private Vector3 checkGroundBoxSize;
@@ -13,13 +13,19 @@ public class Kamadoma : Enemy
     private GameObject player;
     private Rigidbody2D kamadomaRb;
 
+    // Sound Effect
+    private AudioSource audioSource;
+    [SerializeField] AudioClip jumpSound;
+
     // Animation
     private Animator kamadomaAnimator;
+    // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         kamadomaRb = GetComponent<Rigidbody2D>();
         kamadomaAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -64,6 +70,8 @@ public class Kamadoma : Enemy
     {
         // Animation
         kamadomaAnimator.Play("Jump");
+        // Sound Effect
+        audioSource.PlayOneShot(jumpSound);
         // Jump
         kamadomaRb.velocity = Vector2.up * jumpForce;
     }
