@@ -37,6 +37,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    // ABSTRACTION
     void SpawnBullet()
     {
         shootTime = Time.time;

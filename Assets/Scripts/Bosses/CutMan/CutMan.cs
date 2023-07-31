@@ -14,6 +14,7 @@ public class CutMan : Enemy
     private float attackRate = 0.5f;
 
     // Get Damaged Variable
+    // ENCAPSULATION
     public bool isHurting { get; private set; }
     private float hurtingTime;
     private bool isInvincible;
@@ -95,11 +96,13 @@ public class CutMan : Enemy
 
     // Stats Method
     // Use for health UI
+    // ENCAPSULATION
     public float GetHealth()
     {
         return health;
     }
 
+    // ABSTRACTION
     // Movement Methods
     bool IsGrounded()
     {
@@ -216,6 +219,7 @@ public class CutMan : Enemy
         isInvincible = false;
     }
 
+    // POLYMORPHISM
     protected override void GetDamage()
     {
         // Play Hurt Animation

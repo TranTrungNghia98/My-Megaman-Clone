@@ -33,6 +33,7 @@ public class ScrewDriver : Enemy
         CheckDistance();
     }
 
+    // ABSTRACTION
     void CheckDistance()
     {
         Vector2 playerPosition = player.transform.position;

@@ -68,6 +68,7 @@ public class RollingCutter : MonoBehaviour
         }
     }
 
+    // ABSTRACTION
     // If game object can hit player in this time. It will turn back to the boss
     IEnumerator WaitToTurnBack(float timeToMoveBack)
     {

@@ -21,6 +21,7 @@ public class SpawnEnmies : MonoBehaviour
         
     }
 
+    // ABSTRACTION
     void SpawnEnemy()
     {
         if(inRangeSpawn)

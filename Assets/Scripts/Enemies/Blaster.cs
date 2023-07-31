@@ -25,6 +25,7 @@ public class Blaster : Enemy
         ChooseRandomMode();
     }
 
+    // ABSTRACTION
     void ChooseRandomMode()
     {
         float randomNumber = Random.Range(0.0f, 1.0f);
@@ -85,6 +86,7 @@ public class Blaster : Enemy
 
     }
 
+    // POLYMORPHISM
     protected override void GetDamage()
     {
         if (!isDefendMode)

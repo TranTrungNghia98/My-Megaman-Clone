@@ -28,6 +28,7 @@ public class PlayerAnimator : MonoBehaviour
 
     }
 
+    // ABSTRACTION
     public void PlayAnimation(string animationName)
     {
         if (currentAnimation == animationName)

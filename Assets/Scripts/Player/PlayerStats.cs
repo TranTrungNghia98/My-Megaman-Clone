@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     private PlayerSoundEffect playerSoundEffectScript;
 
     private float playerHealth = 100.0f;
+    // ENCAPSULATION
     public bool isHurting { get; private set; }
     private float hurtingTime;
     private bool isInvincible;
@@ -29,11 +30,13 @@ public class PlayerStats : MonoBehaviour
         CheckHeath();
     }
 
+    // ENCAPSULATION
     public float GetPlayerHealth()
     {
         return playerHealth;
     }
 
+    // ABSTRACTION
     public void GetDamage(float damage)
     {
         // After get damaged, player won't get damaged on a few seconds

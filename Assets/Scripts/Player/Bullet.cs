@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
         StartCoroutine(DestroyBullet());
     }
 
+    // ABSTRACTION
     void MoveForward()
     {
         bulletRb.AddForce(transform.right * speed, ForceMode2D.Impulse);

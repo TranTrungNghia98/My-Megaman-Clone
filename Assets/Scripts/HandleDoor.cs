@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class HandleDoor : MonoBehaviour
 {
-    private float topBound = 80;
-    private float bottomBound;
-    private float moveSpeed = 10.0f;
     private bool isOpened = false;
     private bool isClosed = false;
     [SerializeField] GameObject door;
@@ -18,7 +15,6 @@ public class HandleDoor : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        bottomBound = transform.position.y;
     }
 
     // Update is called once per frame
@@ -35,6 +31,7 @@ public class HandleDoor : MonoBehaviour
         }
     }
 
+    // ABSTRACTION
     private void OpenDoor()
     {
         door.SetActive(false);

@@ -49,6 +49,7 @@ public class EnemyMovement : MonoBehaviour
         LookAtPlayer();
     }
 
+    // ABSTRACTION
     void LookAtPlayer()
     {
         if (player.transform.position.x < transform.position.x)

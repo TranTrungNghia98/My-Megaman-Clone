@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // ABSTRACTION
     public int GetScore()
     {
         return score;

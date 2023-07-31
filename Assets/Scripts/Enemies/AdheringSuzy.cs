@@ -30,6 +30,7 @@ public class AdheringSuzy : Enemy
         }
     }
 
+    // ABSTRACTION
     void Move()
     {
         // Open Eye When Move

@@ -56,6 +56,7 @@ public class Mambu : Enemy
     //    }
     //}
 
+    // ABSTRACTION
     private void MoveForward()
     {
         mambuRb.velocity = transform.right * moveSpeed;
@@ -121,6 +122,7 @@ public class Mambu : Enemy
     }
 
     // Change Get Damage Method So game object can't get damage when in defend mode
+    // POLYMORPHISM
     protected override void GetDamage()
     {
         if (!isDefendMode)

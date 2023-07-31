@@ -47,6 +47,7 @@ public class Kamadoma : Enemy
     }
 
     // Create check ground box
+    // ABSTRACTION
     bool isGrounded()
     {
         if (Physics2D.BoxCast(transform.position, checkGroundBoxSize, 0, -transform.up, checkGroundBoxDistance, groundMask))

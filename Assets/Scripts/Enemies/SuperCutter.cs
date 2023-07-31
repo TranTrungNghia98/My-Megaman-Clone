@@ -33,6 +33,7 @@ public class SuperCutter : Enemy
         LookAtPlayer();
     }
 
+    // ABSTRACTION
     void Jump()
     {
         playerPosition = GameObject.Find("Player").transform.position;

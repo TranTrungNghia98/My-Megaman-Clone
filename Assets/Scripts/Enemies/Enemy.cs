@@ -7,19 +7,22 @@ public class Enemy : MonoBehaviour
     // Logic
     [SerializeField] private GameObject explosionPrefab;
 
+    // INHERITANCE
     [SerializeField] protected float health;
     [SerializeField] protected float damage;
     [SerializeField] protected int score;
     [SerializeField] GameObject[] dropItemPrefabs;
     protected PlayerStats playerStatsScript;
     protected GameManager gameManagerScript;
-    
+
+    // ABSTRACTION
     protected virtual void GetDamage()
     {
         float damage = 10;
         health -= damage;
     }
 
+    
     protected void DropItem()
     {
         float randomNumber = Random.Range(0.0f, 1.0f);
